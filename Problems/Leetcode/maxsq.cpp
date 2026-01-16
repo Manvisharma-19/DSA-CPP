@@ -1,7 +1,10 @@
-class Solution {
- public:
-  int maximizeSquareArea(int m, int n, vector<int>& hFences,
-                         vector<int>& vFences) {
+// TIME COMPLEXITY O(H^2 + V^2)
+class Solution
+{
+public:
+  int maximizeSquareArea(int m, int n, vector<int> &hFences,
+                         vector<int> &vFences)
+  {
     constexpr int kMod = 1'000'000'007;
 
     hFences.push_back(1);
@@ -23,8 +26,9 @@ class Solution {
     return maxGap == -1 ? -1 : static_cast<long>(maxGap) * maxGap % kMod;
   }
 
- private:
-  unordered_set<int> getGaps(const vector<int>& fences) {
+private:
+  unordered_set<int> getGaps(const vector<int> &fences)
+  {
     unordered_set<int> gaps;
     for (int i = 0; i < fences.size(); ++i)
       for (int j = 0; j < i; ++j)
