@@ -1,3 +1,4 @@
+//TC - O(E*(log(V))
 class Solution {
 public:
     typedef pair<int, int> P;  // {distance, node}
