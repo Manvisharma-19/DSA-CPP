@@ -1,3 +1,4 @@
+//TC- O(LOG N)
 class Solution {
 public:
     long long sumAndMultiply(int n) {
